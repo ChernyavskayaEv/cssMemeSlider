@@ -209,7 +209,7 @@ body {
 
 .captions {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 #slide1:checked ~ .captions_controls .caption {
@@ -289,4 +289,19 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .captions_controls {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .caption__wrapper {
+    width: inherit;
+  }
+
+  .controls {
+    justify-content: center;
+  }
 }
