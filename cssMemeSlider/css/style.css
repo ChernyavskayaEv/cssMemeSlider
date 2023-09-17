@@ -113,7 +113,7 @@ body {
 
 .myslider {
   width: 90%;
-  height: 85%;
+  height: max-content;
   margin: 5% auto;
   background-color: inherit;
   display: flex;
@@ -209,7 +209,7 @@ body {
 
 .captions {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 #slide1:checked ~ .captions_controls .caption {
@@ -258,32 +258,40 @@ body {
 }
 
 .controls > label {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.controls .point {
   width: 2rem;
   height: 2rem;
-  margin: 1rem;
   background-color: #71abff;
   border-radius: 50%;
   cursor: pointer;
 }
 
-#slide1:checked ~ .captions_controls label:nth-of-type(1),
-#slide2:checked ~ .captions_controls label:nth-of-type(2),
-#slide3:checked ~ .captions_controls label:nth-of-type(3),
-#slide4:checked ~ .captions_controls label:nth-of-type(4),
-#slide5:checked ~ .captions_controls label:nth-of-type(5) {
+#slide1:checked ~ .captions_controls label:nth-of-type(1) .point,
+#slide2:checked ~ .captions_controls label:nth-of-type(2) .point,
+#slide3:checked ~ .captions_controls label:nth-of-type(3) .point,
+#slide4:checked ~ .captions_controls label:nth-of-type(4) .point,
+#slide5:checked ~ .captions_controls label:nth-of-type(5) .point {
   background-color: inherit;
   border: 0.3rem solid #71abff;
 }
 
-#slide1:checked ~ .captions_controls label:nth-of-type(1):hover,
-#slide2:checked ~ .captions_controls label:nth-of-type(2):hover,
-#slide3:checked ~ .captions_controls label:nth-of-type(3):hover,
-#slide4:checked ~ .captions_controls label:nth-of-type(4):hover,
-#slide5:checked ~ .captions_controls label:nth-of-type(5):hover {
+#slide1:checked ~ .captions_controls label:nth-of-type(1):hover .point,
+#slide2:checked ~ .captions_controls label:nth-of-type(2):hover .point,
+#slide3:checked ~ .captions_controls label:nth-of-type(3):hover .point,
+#slide4:checked ~ .captions_controls label:nth-of-type(4):hover .point,
+#slide5:checked ~ .captions_controls label:nth-of-type(5):hover .point {
   border: 0.3rem solid #ddd;
 }
 
-.controls > label:hover {
+label:hover > .point {
   background: #ddd;
 }
 
@@ -291,7 +299,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .captions_controls {
     flex-direction: column-reverse;
     justify-content: center;
