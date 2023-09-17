@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Meme Slider</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="myslider">
+      <input type="radio" name="point" id="slide1" checked />
+      <input type="radio" name="point" id="slide2" />
+      <input type="radio" name="point" id="slide3" />
+      <input type="radio" name="point" id="slide4" />
+      <input type="radio" name="point" id="slide5" />
+      <div class="slider__wrapper">
+        <div class="slider">
+          <div class="slides slide1">
+            <img src="./img/resting_cat.png" alt="resting_cat" />
+          </div>
+          <div class="slides slide2">
+            <img src="./img/i'm_listening.jpg" alt="I'm_listening" />
+          </div>
+          <div class="slides slide3">
+            <img src="./img/thinking_man.png" alt="thinking_man" />
+          </div>
+          <div class="slides slide4">
+            <img src="./img/very_interesting.png" alt="very_interesting" />
+          </div>
+          <div class="slides slide5">
+            <img src="./img/waiting_for.png" alt="waiting_for" />
+          </div>
+        </div>
+      </div>
+      <div class="captions_controls">
+        <div class="caption__wrapper">
+          <div class="caption">
+            <div class="captions caption1">
+              <p>На расслабоне, на чиле...</p>
+            </div>
+            <div class="captions caption2"><p>Я вас слушаю!</p></div>
+            <div class="captions caption3"><p>Дайте подумать...</p></div>
+            <div class="captions caption4">
+              <p>Говорите, говорите, очень интересно!</p>
+            </div>
+            <div class="captions caption5"><p>Давно ждем?</p></div>
+          </div>
+        </div>
+        <div class="controls">
+          <label for="slide1"><div class="point"></div></label>
+          <label for="slide2"><div class="point"></div></label>
+          <label for="slide3"><div class="point"></div></label>
+          <label for="slide4"><div class="point"></div></label>
+          <label for="slide5"><div class="point"></div></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

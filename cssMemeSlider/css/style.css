@@ -1,0 +1,315 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #cfe0e5;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+body {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #2f5c69;
+  font-family: Roboto;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #fff;
+}
+
+.myslider {
+  width: 90%;
+  height: max-content;
+  margin: 5% auto;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.myslider > input {
+  display: none;
+}
+
+.slider__wrapper {
+  overflow: hidden;
+  width: initial;
+  height: 80%;
+  margin-bottom: 2rem;
+}
+
+.slider {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.slides {
+  width: 100%;
+}
+
+.slides > img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  opacity: 0.3;
+  transition: all 1s ease-in-out;
+}
+
+#slide1:checked ~ .slider__wrapper .slide1 img,
+#slide2:checked ~ .slider__wrapper .slide2 img,
+#slide3:checked ~ .slider__wrapper .slide3 img,
+#slide4:checked ~ .slider__wrapper .slide4 img,
+#slide5:checked ~ .slider__wrapper .slide5 img {
+  opacity: 1;
+}
+
+#slide1:checked ~ .slider__wrapper .slider {
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+#slide2:checked ~ .slider__wrapper .slider {
+  transform: translateX(-20%);
+  transition: all 1s ease-in-out;
+}
+
+#slide3:checked ~ .slider__wrapper .slider {
+  transform: translateX(-40%);
+  transition: all 1s ease-in-out;
+}
+
+#slide4:checked ~ .slider__wrapper .slider {
+  transform: translateX(-60%);
+  transition: all 1s ease-in-out;
+}
+
+#slide5:checked ~ .slider__wrapper .slider {
+  transform: translateX(-80%);
+  transition: all 1s ease-in-out;
+}
+
+.captions_controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caption__wrapper {
+  overflow: hidden;
+}
+
+.caption {
+  width: 500%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: transform 2s ease-in-out;
+}
+
+.captions {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+#slide1:checked ~ .captions_controls .caption {
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+#slide2:checked ~ .captions_controls .caption {
+  transform: translateX(-20%);
+  transition: all 1s ease-in-out;
+}
+
+#slide3:checked ~ .captions_controls .caption {
+  transform: translateX(-40%);
+  transition: all 1s ease-in-out;
+}
+
+#slide4:checked ~ .captions_controls .caption {
+  transform: translateX(-60%);
+  transition: all 1s ease-in-out;
+}
+
+#slide5:checked ~ .captions_controls .caption {
+  transform: translateX(-80%);
+  transition: all 1s ease-in-out;
+}
+
+.captions {
+  opacity: 0.3;
+  transition: all 1s ease-in-out;
+}
+
+#slide1:checked ~ .captions_controls .caption1,
+#slide2:checked ~ .captions_controls .caption2,
+#slide3:checked ~ .captions_controls .caption3,
+#slide4:checked ~ .captions_controls .caption4,
+#slide5:checked ~ .captions_controls .caption5 {
+  opacity: 1;
+}
+
+.controls {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.controls > label {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.controls .point {
+  width: 2rem;
+  height: 2rem;
+  background-color: #71abff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .captions_controls label:nth-of-type(1) .point,
+#slide2:checked ~ .captions_controls label:nth-of-type(2) .point,
+#slide3:checked ~ .captions_controls label:nth-of-type(3) .point,
+#slide4:checked ~ .captions_controls label:nth-of-type(4) .point,
+#slide5:checked ~ .captions_controls label:nth-of-type(5) .point {
+  background-color: inherit;
+  border: 0.3rem solid #71abff;
+}
+
+#slide1:checked ~ .captions_controls label:nth-of-type(1):hover .point,
+#slide2:checked ~ .captions_controls label:nth-of-type(2):hover .point,
+#slide3:checked ~ .captions_controls label:nth-of-type(3):hover .point,
+#slide4:checked ~ .captions_controls label:nth-of-type(4):hover .point,
+#slide5:checked ~ .captions_controls label:nth-of-type(5):hover .point {
+  border: 0.3rem solid #ddd;
+}
+
+label:hover > .point {
+  background: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .captions_controls {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .caption__wrapper {
+    width: inherit;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+}
